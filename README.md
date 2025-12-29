@@ -31,9 +31,9 @@ Public UK electricity datasets (to be linked/credited per project):
 
 ## Progress log
 ### Day 1
-- [ ] Created project structure
-- [ ] Created README.md and .gitignore
-- [ ] Initialized git repo and pushed to GitHub
+- [x] Created project structure
+- [x] Created README.md and .gitignore
+- [x] Initialized git repo and pushed to GitHub
 
 ### Day 2
 - [ ] Set up Python environment

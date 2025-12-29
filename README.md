@@ -36,6 +36,6 @@ Public UK electricity datasets (to be linked/credited per project):
 - [x] Initialized git repo and pushed to GitHub
 
 ### Day 2
-- [ ] Set up Python environment
-- [ ] Ran first notebook
-- [ ] Loaded dataset and performed initial checks
+- [x] Set up Python environment
+- [x] Ran first notebook
+- [x] Loaded dataset and performed initial checks

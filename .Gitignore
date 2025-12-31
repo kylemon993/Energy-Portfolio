@@ -1,3 +1,11 @@
 .venv/
 __pycache__/
 .ipynb_checkpoints/
+Data/Processed/uk_electricity_pbi_sample_50k.csv 
+Data/Processed/uk_electricity_pbi_1min.csv
+# Ignore big exports
+Data/Processed/uk_electricity_pbi.csv
+
+# Keep small files you actually want in the repo
+!Data/Processed/uk_electricity_pbi_sample_50k.csv
+!Data/Processed/uk_electricity_pbi_1min.csv

@@ -61,3 +61,27 @@ Public UK electricity datasets (to be linked/credited per project):
   - [x] Cleaning steps performed
   - [x] 1–2 quick observations
 - [x] Commit + push: `Day 3: first dataset + cleaning + chart`
+
+## Day 4 — Power BI Prep Export + First Dashboard (1 hour)
+
+- [x] Create notebook: `notebooks/03_powerbi_prep_and_exports.ipynb`
+- [x] Ensure folders exist: `data/processed/` and `outputs/powerbi/`
+- [x] Load cleaned dataset: `data/processed/uk_electricity_clean.csv`
+- [x] Confirm data types:
+  - [x] `dtm` is datetime
+  - [x] `f` is numeric
+- [x] Create Power BI helper columns in Python:
+  - [x] `minute` (dtm floored to minute)
+  - [x] `rolling_5min` (5-min rolling mean)
+  - [x] `deviation_from_50` (`f - 50.0`)
+  - [x] `out_of_band` flag (`f < 49.9 or f > 50.1`)
+- [x] Export Power BI-ready CSV: `data/processed/uk_electricity_pbi.csv`
+- [x] Build first Power BI report:
+  - [x] Import `data/processed/uk_electricity_pbi.csv`
+  - [x] Line chart: `dtm` vs `f`
+  - [x] Line chart: `dtm` vs `rolling_5min`
+  - [x] KPI cards: Avg `f`, Min `f`, Max `f`, Out-of-band count
+  - [x] Add Date/Time slicer
+- [x] Save Power BI file: `outputs/powerbi/day4_grid_frequency_report.pbix`
+- [x] Add “Day 4 Notes” to README (what you built + 1–2 insights)
+- [x] Commit + push: `Day 4: Power BI export + first dashboard`

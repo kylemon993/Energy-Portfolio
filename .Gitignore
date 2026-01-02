@@ -9,3 +9,12 @@ Data/Processed/uk_electricity_pbi.csv
 # Keep small files you actually want in the repo
 !Data/Processed/uk_electricity_pbi_sample_50k.csv
 !Data/Processed/uk_electricity_pbi_1min.csv
+
+# Processed data can be huge — ignore by default
+Data/Processed/*.csv
+
+# Keep small / shareable exports
+!Data/Processed/*sample*.csv
+!Data/Processed/*1min*.csv
+!Data/Processed/*5min*.csv
+!Data/Processed/*15min*.csv

@@ -85,3 +85,44 @@ Public UK electricity datasets (to be linked/credited per project):
 - [x] Save Power BI file: `outputs/powerbi/day4_grid_frequency_report.pbix`
 - [x] Add “Day 4 Notes” to README (what you built + 1–2 insights)
 - [x] Commit + push: `Day 4: Power BI export + first dashboard`
+
+## Day 5 — Feature Engineering + Aggregation + Lightweight Export (1 hour)
+
+- [ ] Create notebook: `notebooks/04_day5_feature_engineering.ipynb`
+- [ ] Confirm notebook is running from project root (print `Path.cwd()`)
+
+- [ ] Load Power BI-ready dataset:
+  - [ ] Read: `Data/Processed/uk_electricity_pbi.csv` (or your current processed path)
+  - [ ] Confirm: `df.shape`, `df.head()`, `df.dtypes`
+
+- [ ] Data quality checks:
+  - [ ] Check datetime coverage: min/max of `dtm`
+  - [ ] Check duplicates on `dtm`
+  - [ ] Confirm frequency column is numeric (`f` or `Frequency (Hz)`)
+
+- [ ] Feature engineering (time-based):
+  - [ ] Create: `hour`, `day_of_week`, `day_name`, `is_weekend`
+  - [ ] Create: `deviation_from_50` (frequency - 50.0)
+  - [ ] Create: `out_of_band` flag (e.g., <49.8 or >50.2)
+
+- [ ] Aggregation to reduce file size (key deliverable):
+  - [ ] Set datetime index and sort by time
+  - [ ] Create 1-minute dataset with:
+    - [ ] `f_mean`, `f_min`, `f_max`, `f_std`
+    - [ ] `out_of_band_count` per minute
+  - [ ] Export: `Data/Processed/uk_electricity_1min.csv`
+
+- [ ] Optional exports (choose 1):
+  - [ ] Export 5-minute dataset: `Data/Processed/uk_electricity_5min.csv`
+  - [ ] Export 15-minute dataset: `Data/Processed/uk_electricity_15min.csv`
+
+- [ ] Power BI refresh:
+  - [ ] Point Power BI to `uk_electricity_1min.csv`
+  - [ ] Refresh visuals and confirm slicer responsiveness
+
+- [ ] Add “Day 5 Notes” section to README:
+  - [ ] What you built (aggregation + features)
+  - [ ] Before vs after row count + file size
+  - [ ] 1–2 insights from distribution or out-of-band counts
+
+- [ ] Commit + push: `Day 5: feature engineering + 1-min aggregated export`
